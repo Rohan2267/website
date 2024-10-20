@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="stlyes.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="Js.js"></script>
+    <!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2KQ6KL706"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H2KQ6KL706');
+</script>
+<body ng-app="myApp">
+
+    <header>
+        <nav>
+            <div class="logo">MyWebsite</div>
+            <ul>
+                <li><a href="#!/">Home</a></li>
+                <li><a href="#!/about">About</a></li>
+                <li><a href="#!/portfolio">Portfolio</a></li>
+                <li><a href="#!/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Page-specific content will be injected here -->
+        <div ng-view>
+        </div>
+    </main>
+        
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>MyWebsite</h2>
+                <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#!/">Home</a></li>
+                    <li><a href="#!/about">About</a></li>
+                    <li><a href="#!/portfolio">Portfolio</a></li>
+                    <li><a href="#!/contact">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img width="100" height="100" src="https://img.icons8.com/windows/32/facebook-new.png" alt="facebook-new"/></a></li>
+                    <li><a href="#"><img width="100" height="100" src="https://img.icons8.com/fluency-systems-regular/50/twitter.png" alt="twitter"/> </a></li>
+                    <li><a href="#"><img width="100" height="100" src="https://img.icons8.com/windows/32/instagram-new.png" alt="instagram-new"/></a></li>
+                    <li><a href="#"><img width="100" height="100" src="https://img.icons8.com/windows/32/linkedin.png" alt="linkedin"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const typedTextSpan = document.querySelector(".typed-text");
+        const textArray = ["My Website", "Creative Designs", "Innovative Solutions"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        // Start the typing effect on page load
+        setTimeout(type, newTextDelay + 250);
+    });
+</script>

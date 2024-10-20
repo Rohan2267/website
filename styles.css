@@ -465,7 +465,7 @@ button:hover {
         margin-left: 0;
         margin-top: 10px;
     }
-    
+
     
     nav {
         flex-direction: column;
@@ -657,6 +657,18 @@ button:hover {
         font-size: 14px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Stack items vertically on tablets */

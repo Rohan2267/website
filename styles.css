@@ -585,6 +585,7 @@ button:hover {
     .introduction-div {
         flex: 0 0 80%;  /* Increase the width to 80% for tablets */
         padding: 40px 15px;  /* Reduce padding for smaller screens */
+        margin-bottom: 10px;
     }
 
     .introduction-div h2 {
@@ -603,6 +604,7 @@ button:hover {
         flex: 0 0 100%;  /* Full width for mobile screens */
         padding: 30px 10px;  /* Smaller padding for mobile */
         border-radius: 3ch;  /* Smaller border-radius */
+        margin-top: 10px;
     }
 
     .introduction-div h2 {
